@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  node:
+    container_name: portfolio
+    build:
+      context: .
+      dockerfile: DockerFile.node
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+      - "8545:8545"
+    stdin_open: true
+    tty: true
+    networks:
+      - dev
+networks:
+  dev:
+    name: dev

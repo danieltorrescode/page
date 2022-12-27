@@ -1,0 +1,14 @@
+{
+  "server": {
+    "baseDir": [
+      "./public"
+    ],
+    "routes": {
+      "/libs": "./node_modules",
+      "/src": "./src",
+      "/assets": "./assets"
+    }
+  },
+  "port": "8000",
+  "open": false
+}
