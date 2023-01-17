@@ -8,66 +8,70 @@
   <link rel="stylesheet" href="public/styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css">
 
-  <style>
-    .banner{
-      color: white;
-    }
-    #banner{
-      height: 75px;
-      background: rgb(2,0,36);
-      background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,217,255,0.8533613274411327) 100%);
-    }
-  </style>
-
 </head>
-<body class="text-black bg-slate-100">
-  <header id="banner" class="text-gray-100">
-      <div class="container mx-auto grid grid-cols-1">
-        <div class="col-start-1">
-          <h1 class="text-3xl font-medium">
-            <i class="mdi mdi-application-brackets"></i> <strong id="header-name"></strong>
-            </h1>
-            <h1 class="text-lg font-medium" id="header-title"></h1> 
-            <h1 class="text-base" id="job"></h1>
-          </div>
-        </div>
+<body>
+  <header id="banner" class="banner">
+    <div class="container banner-container">
+      <span>
+        <i class="mdi mdi-application-brackets"></i> 
+        <strong id="header-name" class="banner-font-size"></strong>
+      </span>
+    </div>
   </header>
 
-  <div class="container mx-auto py-4 px-64 flex justify-center">
-    <div class="bg-gray-300 rounded-lg p-6 shadow-lg">
-      <div class="flex items-center">
-        <img class="w-20 h-20 rounded-full mr-4" src="..." alt="" id="photo">
-        <div class="text-lg">
-          <p class="font-medium text-gray-800" id="name"></p>
-          <p class="text-gray-600" id="title"></p>
+  
+  <section class="main-card-section">
+    <div class="main-card card-shadow card-margin">
+      <div class="profile-box">
+        <img class="picture" src="..." alt="" id="photo">
+        <div class="name-box">
+          <p class="name" id="name"></p>
+          <p class="tittle" id="title"></p>
         </div>
       </div>
-      <div class="mt-4">
-        <p class="text-gray-600" id="description"></p>
+      <p class="description" id="description"></p>
+
+      <div class="icon-container" id="icon-container">
+        <i class="mdi mdi-console icon"></i>
+        <i class="mdi mdi-linux icon"></i>
+        <i class="mdi mdi-arch icon"></i>
+        <i class="mdi mdi-code-json icon"></i>
+        <i class="mdi mdi-language-html5 icon"></i>
+        <i class="mdi mdi-language-css3 icon"></i>
+        <i class="mdi mdi-language-javascript icon"></i>
+        <i class="mdi mdi-nodejs icon"></i>
+        <i class="mdi mdi-vuejs icon"></i>
+        <i class="mdi mdi-language-python icon"></i>
+        <i class="mdi mdi-git icon"></i>
+        <i class="mdi mdi-github icon"></i>
+        <i class="mdi mdi-gitlab icon"></i>
+        <i class="mdi mdi-docker icon"></i>
+        <i class="mdi mdi-server-security icon"></i>
+        <i class="mdi mdi-database icon"></i>
+        <i class="mdi mdi-database-cog icon"></i>
+        <i class="mdi mdi-flask icon"></i>
+        <i class="mdi mdi-calculator-variant-outline icon"></i>
       </div>
 
-      <!-- <div class="flex flex-wrap justify-center" id="icon-container"></div> -->
-
-      <span tabindex="0" class="inline-block bg-gray-100 hover:bg-gray-400 rounded-full px-3 py-1 text-sm font-medium text-gray-700 mr-2">
-        <a href="#" class="text-lg" id="github-link">
+      <span tabindex="0" class="buttom">
+        <a href="#" id="github-link">
           <i class="mdi mdi-github"></i>
           GitHub
         </a>
       </span>
-
-      <span tabindex="0" class="inline-block bg-gray-100 hover:bg-gray-400 rounded-full px-3 py-1 text-sm font-medium text-gray-700 mr-2">
-        <a href="#" class="text-lg" id="linkedin-link">
+      <span tabindex="0" class="buttom">
+        <a href="#" id="linkedin-link">
           <i class="mdi mdi-linkedin"></i>
           LinkedIn
         </a>
       </span>
-    </div>
-  </div>
 
-  <div class="flex flex-wrap justify-center" >
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3" id="card-container">
     </div>
-  </div>
+  </section>
+
+  <section class="grid-section" >
+    <div class="grid grid-cols" id="card-container"></div>
+  </section>
   
   <!-- <script src="/libs/@truffle"></script> -->
   <script src="./public/scripts.js" ></script>

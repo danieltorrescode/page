@@ -57,7 +57,7 @@ data =  {
     },
     {
       codename: "Full-Stack WebDev",
-      description: "Full-Stack WebDev",
+      description: "My github repositories, a collection of stacks of different technologies intended as code playground for learning",
       image: "assets/img/vue1.png",
       github: "https://github.com/danieltorrescode/",
       link: "",
@@ -65,71 +65,36 @@ data =  {
         "",
     },
   ],
-  icons:[
-    "mdi-console",
-    "mdi-linux",
-    // "mdi-arch",
-    "mdi-code-json",
-    "mdi-language-html5",
-    "mdi-language-css3",
-    "mdi-tailwind",
-    "mdi-language-javascript",
-    "mdi-nodejs",
-    "mdi-vuejs",
-    "mdi-language-python",
-    "mdi-git",
-    "mdi-github",
-    "mdi-gitlab",
-    "mdi-docker",
-    "mdi-database",
-    "mdi-database-cog",
-    "mdi-flask",
-    "mdi-calculator-variant-outline",
-  ],
 };
 
-
-function insertCards(numOfCards) {
-  let cardContainer = document.getElementById("card-container");
-    data.portfolio.forEach(item => {
-      cardContainer.innerHTML += `
-      <div class="max-w-sm rounded-lg overflow-hidden shadow-lg  my-2 mx-5 bg-gray-300">
-        <img src="${item.image}" class="w-10" alt="...">
-        <div class="px-6 py-4">
-          <div class="font-medium text-xl mb-2">${item.codename}</div>
-          <p class="text-gray-700 text-base">
-          ${item.description}
-          </p>
-        </div>
-        <div class="flex items-end px-6 py-4">
-          <a href="${item.github}" class="bg-gray-100 hover:bg-gray-400 text-gray-700 font-medium py-2 px-4 rounded-full">
-            <i class="mdi mdi-github"></i> GitHub
-          </a>
-        </div>
-      </div>
-      `;
-    });
-}
-function insertIcons() {
-  let IconContainer = document.getElementById("icon-container");
-  data.icons.forEach(icon => {
-  IconContainer.innerHTML += `
-      <div class="w-12 h-12 text-center m-2">
-        <i class="mdi ${icon} text-gray-800"></i>
-      </div>
-    `;
-  });
-}
-
-
 document.getElementById('header-name').innerHTML = data.contact.username;
-document.getElementById('header-title').innerHTML = data.contact.title;
 document.getElementById('name').innerHTML = data.contact.name;
 document.getElementById('title').innerHTML = data.contact.title;
 document.getElementById("github-link").setAttribute("href", data.contact.github);
 document.getElementById("linkedin-link").setAttribute("href", data.contact.linkedin);
 document.getElementById("photo").setAttribute("src", data.about.photo);
-
 document.getElementById('description').innerHTML = data.about.description;
-insertIcons();
+
+function insertCards(numOfCards) {
+  let cardContainer = document.getElementById("card-container");
+    cardContainer.innerHTML = ''
+    data.portfolio.forEach(item => {
+      cardContainer.innerHTML += `
+      <div class="project-card card-shadow">
+        <img src="${item.image}" class="project-img" alt="...">
+        <div class="project-info-box">
+          <div class="project-codename">${item.codename}</div>
+          <p class="project-description">${item.description}</p>
+        </div>
+        <span tabindex="0" class="buttom">
+          <a href="${item.github}" id="github-link">
+            <i class="mdi mdi-github"></i>
+            GitHub
+          </a>
+        </span>
+      </div>
+      `;
+    });
+}
+
 insertCards();
