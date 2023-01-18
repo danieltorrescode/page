@@ -96,8 +96,8 @@ a {
 }
 
 .banner-container{
-  margin-left: 2%;
-  margin-right: auto;
+  padding-top: 1%;
+  padding-left: 2%;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   font-size: 1.875rem/* 30px */;
@@ -118,14 +118,12 @@ a {
 .main-card{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-  border-radius: 0.5rem/* 8px */;
+  border-radius: 1rem/* 8px */;
   padding: 1.5rem/* 24px */;
 }
 
 .card-shadow{
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card-margin {
@@ -152,11 +150,13 @@ a {
 }
 
 .name{
+  margin: 0px;
   font-weight: 500;
   --tw-text-opacity: 1;
     color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 .tittle{
+  margin: 0px;
   --tw-text-opacity: 1;
     color: rgb(75 85 99 / var(--tw-text-opacity));
 }
@@ -217,14 +217,13 @@ a {
 .grid{
   display: grid;
   gap: 1rem/* 16px */;
-  gap: 1px/* 16px */;
 }
 
 .grid-cols{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-@media (min-width: 640px) {
+@media (min-width: 665px) {
   .grid-cols {
       grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -236,7 +235,7 @@ a {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1350px) {
   .grid-cols {
       grid-template-columns: repeat(4, minmax(0, 1fr));
   }
