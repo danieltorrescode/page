@@ -127,7 +127,37 @@ a {
 }
 
 .card-margin {
-    margin: auto 5
+    margin: auto 5%
+}
+
+@media (max-width: 362px) {
+  .card-margin {
+      margin: auto 5%;
+  }
+  .banner-font-size {
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 640px) {
+  .card-margin {
+      margin: auto 10%;
+  }
+}
+@media (min-width: 768px) {
+  .card-margin {
+      margin: auto 15%;
+  }
+}
+@media (min-width: 1024px) {
+  .card-margin {
+      margin: auto 20%;
+  }
+}
+@media (min-width: 1280px) {
+  .card-margin {
+      margin: auto 25%;
+  }
 }
 
 .profile-box{
@@ -162,6 +192,7 @@ a {
 }
 .description{
   margin-top: 1rem/* 16px */;
+  text-align: justify;
   --tw-text-opacity: 1;
     color: rgb(17 24 39 / var(--tw-text-opacity));
 }
@@ -281,49 +312,10 @@ a {
 }
 
 .project-description{
+  text-align: justify;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 
   font-size: 1rem/* 16px */;
   line-height: 1.5rem/* 24px */;
-}
-
-.bor{
-  border: solid red;
-  overflow: hidden;
-}
-
-@media (max-width: 362px) {
-  .card-margin {
-      margin: auto 5%;
-  }
-  .banner-font-size {
-    font-size: 80%;
-  }
-}
-
-@media (min-width: 640px) {
-  .card-margin {
-      margin: auto 5%;
-  }
-}
-@media (min-width: 768px) {
-  .card-margin {
-      margin: auto 10%;
-  }
-}
-@media (min-width: 1024px) {
-  .card-margin {
-      margin: auto 15%;
-  }
-}
-@media (min-width: 1280px) {
-  .card-margin {
-      margin: auto 20%;
-  }
-}
-@media (min-width: 1536px) {
-  .card-margin {
-      margin: auto 25%;
-  }
 }
