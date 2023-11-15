@@ -58,7 +58,7 @@ data =  {
     {
       codename: "Full-Stack WebDev",
       description: "My github repositories, a collection of projects intended as code playground for learning",
-      image: "assets/img/vue1.png",
+      image: "assets/img/webdev.png",
       github: "https://github.com/danieltorrescode/",
       link: "",
       details:
